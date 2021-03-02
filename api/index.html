@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap5.min.css">
+    <title>Document</title>
+	<style>
+		header {
+			background: url("bg.jpeg") no-repeat;
+			background-size: cover;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="cotainer-fluid">
+		<h1 class="p-5 text-info text-center border-bottom">Toys API documantation</h1>
+    </header>
+    <div class="container border-top border-bottom">
+        <p>1. To display all toys as json in DB use this link: https://adambenyaakov.herokuapp.com/toys<br /> 10 products are displayed on each page. To go to the next page, you can add a GET parameter "page" with value of the page number. Example: https://adambenyaakov.herokuapp.com/toys?page=1</p>
+		
+		<p>2. To search a toys in the DB use this like below with a GET Parametr "s" which contain a search query. Example https://adambenyaakov.herokuapp.com/toys?s=batman&page=0</p>
+		
+		<p>3. Filter out toys by category for the db use the the url with number of category. Example: https://adambenyaakov.herokuapp.com/toys/cat/{num_of_category}. There is only 1, 2, 3 categories on the service</p>
+		
+		<p>4. To find out all toys you want between the minium price to the maxium you input in the string query use this url https://adambenyaakov.herokuapp.com/toys/prices/?min=&max= e.g https://adambenyaakov.herokuapp.com/toys/prices/?min=20&max=45 here you will toys that cost between 20-45 include.<br />10 products are displayed on each page. To go to the next page, you can add a GET parameter "page" with value of the page number. Example: https://adambenyaakov.herokuapp.com/toys/prices/?min=20&max=45&page=1</p></p>
+		
+		<p>5. To ADD, EDIT, DELETE your toys you must sign up and sign in your account and you will receive a unique token that is required to perform this operations.</p>
+		
+		<p>6. To Sign up your account send a POST method to the URL: https://adambenyaakov.herokuapp.com/users with required parameters: "name" -> which contain your name, "email" -> which contain your email, "password" -> which contain your password.</p>
+		
+		<p>7. To Sign in your account send a POST method to the URL: https://adambenyaakov.herokuapp.com/users/login with required parameters: "email" -> which contain your email, "password" -> which contain your password. after successful authorization, you will receive a json response with your unique token.</p>
+		
+		<p>* All the next methods must be sended with a header auth-token which value is your unique token</p>
+		
+		<p>8. To ADD new toy to DB send a POST method to the URL: https://adambenyaakov.herokuapp.com/toys with required parameters: "name" -> which contain name of toy min len 2 maxlen 50, "info" -> which contain info about a toy min len 2 maxlen 100, "category" -> which contain number of category 1, 2 or 3. "img_url" -> which contain a link to image of toy min len 2 maxlen 250, "price" -> which contain a price of toy</p>
+		
+		<p>9. To EDIT toy send a PUT method to the URL with a toy ID. Example: https://adambenyaakov.herokuapp.com/toys/{toy_id} with a parameters you want to change: "name", "info", "category", "img_url", "price"</p>
+		
+		<p>10. To DELETE toy send a DELETE method to the URL with a toy ID. Example: https://adambenyaakov.herokuapp.com/toys/{toy_id} </p>
+		
+       </div>
+</body>
+
+</html>
